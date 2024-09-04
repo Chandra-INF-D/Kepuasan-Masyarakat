@@ -38,7 +38,8 @@ class RespondenController extends Controller
                     ->orWhere('age', 'like', "%$searchTerm%")
                     ->orWhere('education', 'like', "%$searchTerm%")
                     ->orWhere('job', 'like', "%$searchTerm%")
-                    ->orWhere('village_id', 'like', "%$searchTerm%");
+                    ->orWhere('village_id', 'like', "%$searchTerm%")
+                    ->orWhere('domicile', 'like', "%$searchTerm%");
             });
         }
 
@@ -76,6 +77,11 @@ class RespondenController extends Controller
         if (isset($request->village)) {
             $query->where('village_id', $request->village);
         }
+
+        if (isset($request->domicile)) {
+            $query->where('domicile', $request->domicile);
+        }
+
 
         $respondens = $query->latest()->paginate($request->per_page ?? 5);
         $villages = Village::all();

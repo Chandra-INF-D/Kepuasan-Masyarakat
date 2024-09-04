@@ -119,7 +119,8 @@ class IndexController extends Controller
                     'age' => 'required|numeric|min:1|max:122',
                     'education' => 'required',
                     'job' => 'required',
-                    'village' => 'required'
+                    'village' => 'required',
+                    'domicile' => 'required',
                 ]);
 
                 if ($validator->fails()) {
@@ -182,6 +183,7 @@ class IndexController extends Controller
                 'education' => $request->education,
                 'job' => $request->job,
                 'village_id' => $request->village,
+                'domicile' => $request->domicile,
             ]);
 
             if($request->feedback) {

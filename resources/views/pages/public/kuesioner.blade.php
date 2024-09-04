@@ -75,6 +75,16 @@
 	        'label' => 'Lainnya',
 	    ],
 	];
+	$domiciles = [
+	    (object) [
+	        'value' => 'Garut',
+	        'label' => 'Garut',
+	    ],
+	    (object) [
+	        'value' => 'LuarGarut',
+	        'label' => 'LuarGarut',
+	    ],
+	];
 @endphp
 @extends('layouts.public')
 @section('title', 'Kuesioner')
@@ -112,7 +122,7 @@
 		</ol>
 		<div class="mx-auto flex flex-col space-y-5 max-w-screen-lg px-4 py-8">
 			@if ($step == 1)
-				<x-form.personal-info :genders="$genders" :educations="$educations" :jobs="$jobs" :total-kuesioner="$totalKuesioner" :villages="$villages" />
+				<x-form.personal-info :genders="$genders" :educations="$educations" :jobs="$jobs" :total-kuesioner="$totalKuesioner" :villages="$villages" :domiciles="$domiciles"/>
 			@elseif ($step == 2)
 				<x-form.kuesioner :previous="$previous" :step="$step" :question="$question" :total-kuesioner="$totalKuesioner" :next="$next" :kuesioner="$kuesioner" :data="$data" />
 			@elseif ($step == 3)

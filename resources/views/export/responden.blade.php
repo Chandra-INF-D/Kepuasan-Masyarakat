@@ -111,6 +111,11 @@
 								<td>{{ request('village') ?? 'Semua' }}</td>
 							</tr>
 							<tr>
+								<th>Tempat Tinggal</th>
+								<td>:</td>
+								<td>{{ request('Domicile') ?? 'Semua' }}</td>
+							</tr>
+							<tr>
 								<th>Pencarian</th>
 								<td>:</td>
 								<td>{{ request('search') }}</td>
@@ -139,6 +144,10 @@
 		<div class="chart-container">
 			<h5>Responden Menurut Desa</h5>
 			<img src="{{ 'https://quickchart.io/chart?c=' . urlencode($chartDesaConfig) }}" alt="Chart" class="chart-img" />
+		</div>
+		<div class="chart-container">
+			<h5>Responden Menurut Tempat Tinggal</h5>
+			<img src="{{ 'https://quickchart.io/chart?c=' . urlencode($chartDomisiliConfig) }}" alt="Chart" class="chart-img" />
 		</div>
 		<table style="margin-top: 50px; width: 100%;">
 			<tr>

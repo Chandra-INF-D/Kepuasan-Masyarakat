@@ -173,7 +173,6 @@
 							@endforeach
 						</select>
 					</div>
-				</div>
 				<div class="mb-4 grid grid-cols-5 gap-4">
 					<div class="relative">
 						<label for="per_page" class="absolute -top-2 left-3 bg-white px-1 text-[.65rem] text-gray-400">Per Halaman</label>
@@ -193,7 +192,7 @@
 							</svg>
 						</div>
 						<input type="text" id="search" name="search" value="{{ request('search') }}" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Cari...">
-					</div>
+					<v>
 				</div>
 				<div class="grid grid-cols-4 gap-4">
 					<button type="submit" class="col-span-3 flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700">
@@ -257,6 +256,9 @@
 						</th>
 						<th scope="col" class="px-6 py-3">
 							Desa
+						<emp>
+						<th scope="col" class="px-6 py-3">
+							Tempat Tinggal
 						</th>
 						<th scope="col" class="px-6 py-3">
 							Aksi
@@ -294,6 +296,9 @@
 								<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
 									{{ $responden->village->village }}
 								</td>
+								<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
+									{{ $responden->domicile }}
+								</td>
 								<td class="flex space-x-3 whitespace-nowrap px-6 py-4">
 									<a href="{{ route('responden.show', $responden->uuid) }}" class="font-medium text-blue-600 hover:underline dark:text-blue-500">Detail</a>
 								</td>
@@ -312,6 +317,7 @@
 				        'education' => request('education'),
 				        'job' => request('job'),
 				        'village' => request('village'),
+						'domicile' => request('domicile'),
 				        'search' => request('search'),
 				        'per_page' => request('per_page'),
 				        'filter' => request('filter'),

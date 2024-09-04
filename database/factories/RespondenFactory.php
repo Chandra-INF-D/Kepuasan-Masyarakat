@@ -23,6 +23,7 @@ class RespondenFactory extends Factory
             'education' => fake()->randomElement(['SD', 'SMP', 'SMA', 'D4', 'D3', 'S1', 'S2', 'S3']),
             'job' => fake()->randomElement(['Pelajar/Mahasiswa', 'PNS', 'TNI', 'Polisi', 'Swasta', 'Wirausaha', 'Lainnya']),
             'village' => fake()->randomElement(['Moodulio', 'Muara Bone', 'Masiaga', 'Taludaa', 'Permata', 'Inogaluma', 'Molamahu', 'Sogitia', 'Cendana Putih', 'Monano', 'Tumbuh Mekar', 'Waluhu', 'Ilohuuwa', 'Bilolantunga']),
+            'domicile' => fake()->randomElement(['Garut', 'LuarGarut']),
             'email' => fake()->unique()->safeEmail(),
             'telp' => fake()->e164PhoneNumber() ,
         ];

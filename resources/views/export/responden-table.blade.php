@@ -91,7 +91,7 @@
 					<td>
 						<table>
 							<tr>
-								<th>Jenis Kelamin</th>
+								<th> Kelamin</th>
 								<td>:</td>
 								<td>{{ request('gender') ?? 'Semua' }}</td>
 							</tr>
@@ -124,6 +124,11 @@
 								<td>{{ request('village') ?? 'Semua' }}</td>
 							</tr>
 							<tr>
+								<th>Tempat Tinggal</th>
+								<td>:</td>
+								<td>{{ request('domicile') ?? 'Semua' }}</td>
+							</tr>
+							<tr>
 								<th>Pencarian</th>
 								<td>:</td>
 								<td>{{ request('search') }}</td>
@@ -143,6 +148,7 @@
 				<th>PENDIDIKAN</th>
 				<th>PEKERJAAN</th>
 				<th>DESA</th>
+				<th>Tempat Tinggal</th>
 			</tr>
 			@foreach ($respondens as $responden)
 				<tr>
@@ -153,6 +159,7 @@
 					<td>{{ $responden->education }}</td>
 					<td>{{ $responden->job }}</td>
 					<td>{{ $responden->village->village }}</td>
+					<td>{{ $responden->domicile }}</td>
 				</tr>
 			@endforeach
 		</table>

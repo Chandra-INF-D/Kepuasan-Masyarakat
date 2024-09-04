@@ -271,8 +271,18 @@ class DasborController extends Controller
             'total' => $dataRespondens->count(),
             'colors' => [$colors->red, $colors->orange, $colors->yellow, $colors->green, $colors->blue, $colors->purple, $colors->pink, $colors->brown, $colors->gray, $colors->teal, $colors->cyan, $colors->indigo, $colors->lime, $colors->amber]
         ];
+        
+        $dataGrafikDomisili = (object) [
+            'series' => [
+                (int) number_format(getPercentage($dataRespondens->where('domicile', 'Garut')->count(), $dataRespondens->count()), 2),
+                (int) number_format(getPercentage($dataRespondens->where('domicile', 'LuarGarut')->count(), $dataRespondens->count()), 2)
+            ],
+            'labels' => ['Garut', 'LuarGarut'],
+            'total' => $dataRespondens->count(),
+            'colors' => [$colors->red, $colors->blue]
+        ];
 
-        return view('pages.dashboard.index', compact('total', 'answers', 'dataGrafikJenisKelamin', 'dataGrafikUmur', 'dataGrafikPendidikan', 'dataGrafikPekerjaan', 'dataGrafikDesa'));
+        return view('pages.dashboard.index', compact('total', 'answers', 'dataGrafikJenisKelamin', 'dataGrafikUmur', 'dataGrafikPendidikan', 'dataGrafikPekerjaan', 'dataGrafikDesa', 'dataGrafikDomisili'));
     }
 
     public function ikm(Request $request)

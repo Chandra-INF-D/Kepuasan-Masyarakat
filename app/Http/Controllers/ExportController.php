@@ -40,7 +40,8 @@ function getRespondenDataExport($request)
         ->orWhere('age', 'like', "%$searchTerm%")
         ->orWhere('education', 'like', "%$searchTerm%")
         ->orWhere('job', 'like', "%$searchTerm%")
-        ->orWhere('village_id', 'like', "%$searchTerm%");
+        ->orWhere('village_id', 'like', "%$searchTerm%")
+        ->orWhere('domicile', 'like', "%$searchTerm%");
     });
   }
 
@@ -77,6 +78,9 @@ function getRespondenDataExport($request)
 
   if (isset($request->village)) {
     $query->where('village_id', $request->village);
+  }
+  if (isset($request->domicile)) {
+    $query->where('domicile', $request->domicile);
   }
 
   $respondens = $query->get();
@@ -160,13 +164,25 @@ function getRespondenDataExport($request)
                   }]
                 }
               }';
+              
+  $chartDomisiliConfig = '{
+            "type": "bar",
+            "data": {
+              "labels": ["Garut", "LuarGarut"],
+              "datasets": [{
+                "label": "Domisili",
+                "data": [' . $respondens->where('domicile', 'Garut')->count() . ', ' . $respondens->where('domicile', 'LuarGarut')->count() . ']
+              }]
+            }
+          }';            
 
   return [
     'chartJKConfig' => $chartJKConfig,
     'chartUmurConfig' => $chartUmurConfig,
     'chartPendidikanConfig' => $chartPendidikanConfig,
     'chartPekerjaanConfig' => $chartPekerjaanConfig,
-    'chartDesaConfig' => $chartDesaConfig
+    'chartDesaConfig' => $chartDesaConfig,
+    'chartDomisiliConfig' => $chartDomisiliConfig
   ];
 }
 
@@ -182,7 +198,7 @@ class ExportController extends Controller
 
     extract(getRespondenDataExport($request));
 
-    $Pdf = Pdf::loadView('export.responden', compact('chartJKConfig', 'chartUmurConfig', 'chartPendidikanConfig', 'chartPekerjaanConfig', 'chartDesaConfig'));
+    $Pdf = Pdf::loadView('export.responden', compact('chartJKConfig', 'chartUmurConfig', 'chartPendidikanConfig', 'chartPekerjaanConfig', 'chartDesaConfig', 'chartDomisiliConfig'));
 
     return $Pdf->download('Laporan Responden.Pdf');
   }
@@ -197,7 +213,7 @@ class ExportController extends Controller
 
     extract(getRespondenDataExport($request));
 
-    $Pdf = Pdf::loadView('export.responden', compact('chartJKConfig', 'chartUmurConfig', 'chartPendidikanConfig', 'chartPekerjaanConfig', 'chartDesaConfig'));
+    $Pdf = Pdf::loadView('export.responden', compact('chartJKConfig', 'chartUmurConfig', 'chartPendidikanConfig', 'chartPekerjaanConfig', 'chartDesaConfig','chartDomisiliConfig'));
     return $Pdf->stream();
   }
 
@@ -230,7 +246,8 @@ class ExportController extends Controller
           ->orWhere('age', 'like', "%$searchTerm%")
           ->orWhere('education', 'like', "%$searchTerm%")
           ->orWhere('job', 'like', "%$searchTerm%")
-          ->orWhere('village', 'like', "%$searchTerm%");
+          ->orWhere('village', 'like', "%$searchTerm%")
+          ->orWhere('domicile', 'like', "%$searchTerm%");
       });
     }
 
@@ -268,6 +285,11 @@ class ExportController extends Controller
     if (isset($request->village)) {
       $query->where('village', $request->village);
     }
+
+    if (isset($request->domicile)) {
+      $query->where('domicile', $request->domicile);
+    }
+
 
     $respondens = $query->latest()->paginate($request->per_page ?? 5);
 
@@ -310,7 +332,8 @@ class ExportController extends Controller
           ->orWhere('age', 'like', "%$searchTerm%")
           ->orWhere('education', 'like', "%$searchTerm%")
           ->orWhere('job', 'like', "%$searchTerm%")
-          ->orWhere('village', 'like', "%$searchTerm%");
+          ->orWhere('village', 'like', "%$searchTerm%")
+          ->orWhere('domicile', 'like', "%$searchTerm%");
       });
     }
 
@@ -349,6 +372,9 @@ class ExportController extends Controller
       $query->where('village', $request->village);
     }
 
+    if (isset($request->domicile)) {
+      $query->where('domicile', $request->domicile);
+    }
     $respondens = $query->latest()->paginate($request->per_page ?? 5);
 
     if (count($respondens) == 0) {

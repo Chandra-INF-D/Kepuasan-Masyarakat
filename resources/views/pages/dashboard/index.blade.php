@@ -103,6 +103,14 @@
 			</div>
 			<div class="py-6" id="grafik-berdasarkan-desa"></div>
 		</div>
+		<div class="rounded-lg border bg-white p-4 shadow dark:bg-gray-800 md:p-6">
+			<div class="mb-3 flex justify-between">
+				<div class="flex items-center justify-center">
+					<h5 class="pr-1 text-xl font-bold leading-none text-gray-900 dark:text-white">Grafik Responden Berdasarkan Tempat Tinggal</h5>
+				</div>
+			</div>
+			<div class="py-6" id="grafik-berdasarkan-tempat-tinggal"></div>
+		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -418,6 +426,11 @@
 			const dataGrafikDesa = @json($dataGrafikDesa);
 			if (document.getElementById("grafik-berdasarkan-desa") && typeof ApexCharts !== 'undefined') {
 				const chart = new ApexCharts(document.getElementById("grafik-berdasarkan-desa"), getChartOptions(dataGrafikDesa.series, dataGrafikDesa.labels, dataGrafikDesa.total, dataGrafikDesa.colors));
+				chart.render();
+			}
+			const dataGrafikDomisili = @json($dataGrafikDomisili);
+			if (document.getElementById("grafik-berdasarkan-tempat-tinggal") && typeof ApexCharts !== 'undefined') {
+				const chart = new ApexCharts(document.getElementById("grafik-berdasarkan-tempat-tinggal"), getChartOptions(dataGrafikDomisili.series, dataGrafikDomisili.labels, dataGrafikDomisili.total, dataGrafikDomisili.colors));
 				chart.render();
 			}
 		});

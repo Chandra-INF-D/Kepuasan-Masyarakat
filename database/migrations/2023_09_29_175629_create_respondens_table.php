@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('education');
             $table->string('job');
             $table->foreignId('village_id')->constrained('villages')->onDelete('cascade');
+            $table->string('domicile');
             $table->timestamps();
         });
     }
