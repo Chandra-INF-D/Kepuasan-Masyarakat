@@ -19,10 +19,10 @@
 	<div class="flex space-x-5">
 		@for ($i = 1; $i <= 4; $i++)
 			<?php
-			  $opacityClass = $selected[$question] == $i ? '' : 'opacity-50';
+			  $opacityClass = $selected[$question] == $i ? '' : 'opacity-100';
 			?>
 			<a href="{{ route('kuesioner', [...$data, ...['question' . $question => $i]]) }}" data-tooltip-target="rate{{ $i }}" data-tooltip-style="light" data-tooltip-placement="bottom" class="{{ $opacityClass }} transform transition duration-100 hover:scale-125 hover:opacity-100">
-				<img src="{{ asset('assets/' . $i . '.svg') }}" class="h-12 w-12">
+				<img src="{{ asset('assets/' . $i . '.svg') }}" class="h-20 w-20">
 			</a>
 			<div id="rate{{ $i }}" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-900 opacity-0 shadow-sm">
 				{{ rateLabel($i) }}

@@ -5,8 +5,8 @@
 @section('content')
 	<div class="my-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
 		<div class="duration-250 transform cursor-pointer overflow-hidden rounded-lg border bg-white shadow transition hover:scale-100 hover:shadow-lg">
-			<div class="flex h-20 items-center justify-between bg-red-400">
-				<p class="mr-0 pl-5 text-lg text-white">KUESIONER</p>
+			<div class="flex h-20 items-center justify-between bg-green-100">
+				<p class="mr-0 pl-5 text-lg text-black">KUESIONER</p>
 			</div>
 			<div class="mb-2 flex justify-between px-5 pt-6 text-sm text-gray-600">
 				<p>TOTAL</p>
@@ -14,8 +14,8 @@
 			<p class="ml-5 py-4 text-3xl">{{ $total->kuesioner }}</p>
 		</div>
 		<div class="duration-250 transform cursor-pointer overflow-hidden rounded-lg border bg-white shadow transition hover:scale-100 hover:shadow-lg">
-			<div class="flex h-20 items-center justify-between bg-blue-500">
-				<p class="mr-0 pl-5 text-lg text-white">JAWABAN</p>
+			<div class="flex h-20 items-center justify-between bg-blue-100">
+				<p class="mr-0 pl-5 text-lg text-black">JAWABAN</p>
 			</div>
 			<div class="mb-2 flex justify-between px-5 pt-6 text-sm text-gray-600">
 				<p>TOTAL</p>
@@ -23,7 +23,7 @@
 			<p class="ml-5 py-4 text-3xl">{{ $total->answer }}</p>
 		</div>
 		<div class="duration-250 transform cursor-pointer overflow-hidden rounded-lg border bg-white shadow transition hover:scale-100 hover:shadow-lg">
-			<div class="flex h-20 items-center justify-between bg-purple-400">
+			<div class="flex h-20 items-center justify-between bg-red-400">
 				<p class="mr-0 pl-5 text-lg text-white">RESPONDEN</p>
 			</div>
 			<div class="mb-2 flex justify-between px-5 pt-6 text-sm text-gray-600">
@@ -32,7 +32,7 @@
 			<p class="ml-5 py-4 text-3xl">{{ $total->responden }}</p>
 		</div>
 		<div class="duration-250 transform cursor-pointer overflow-hidden rounded-lg border bg-white shadow transition hover:scale-100 hover:shadow-lg">
-			<div class="flex h-20 items-center justify-between bg-purple-900">
+			<div class="flex h-20 items-center justify-between bg-purple-400">
 				<p class="mr-0 pl-5 text-lg text-white">KRITIK & SARAN</p>
 			</div>
 			<div class="mb-2 flex justify-between px-5 pt-6 text-sm text-gray-600">

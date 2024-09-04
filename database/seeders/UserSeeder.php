@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
             'name' => 'Admin IKM',
             'email' => 'admin@ikm.test',
             'password' => Hash::make('pass1234'),
-            'avatar' => 'https://www.gravatar.com/avatar/'.hash('sha256', strtolower(trim('admin@ikm.test')))
+            'avatar' => hash('sha256', strtolower(trim('admin@ikm.test')))
         ]);
     }
 }

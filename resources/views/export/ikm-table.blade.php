@@ -58,9 +58,9 @@
 					</td>
 					<td style="vertical-align: middle; line-height: 1.5;">
 						<div style="text-align: center;">
-							<h4 style="font-size: 1.2rem; margin: 0;">PEMERINTAH KABUPATEN BONE BOLANGO</h4>
-							<div style="margin: 5px 0;">KANTOR CAMAT BONE</div>
-							<div>JL. Trans Sulawesi Desa Taludaa Kode Pos 96571</div>
+							<h4 style="font-size: 1.2rem; margin: 0;">DINAS KOMUNIKASI DAN INFORMATIKA</h4>
+							<div style="margin: 5px 0;">KANTOR DISKOMINFO</div>
+							<div>Jl. Pramuka No.6, Pakuwon, Kec. Garut Kota, Kabupaten Garut, Jawa Barat 44117</div>
 						</div>
 					</td>
 					<td style="width: 15%;"></td>
@@ -68,8 +68,8 @@
 			</table>
 			<div class="title">
 				<span class="text-md">LAPORAN TABEL HASIL SURVEI KEPUASAN MASYARAKAT <br>
-					KANTOR CAMAT BONE <br>
-					KABUPATEN BONE BOLANGO</span>
+					KANTOR DISKOMINFO <br>
+					KABUPATEN GARUT</span>
 				</span>
 			</div>
 			{{-- <table style="width: 100%;">
@@ -213,10 +213,10 @@
 			<tr>
 				<td></td>
 				<td style="text-align: center; width: 40%;">
-					<div>Bone, {{ now()->format('d/m/Y') }}</div>
-					<div style="margin-bottom: 50px;">Camat Bone</div>
-					<div>Dahlan Tomelo, S.Pd</div>
-					<div>Nip. 1979032320060411016</div>
+					<div>Garut, {{ now()->format('d/m/Y') }}</div>
+					<div style="margin-bottom: 50px;">Kepala Diskominfo</div>
+					<div>Margiyanto, S.H</div>
+					<div>Nip.</div>
 				</td>
 			</tr>
 		</table>

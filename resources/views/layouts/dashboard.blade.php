@@ -1,34 +1,34 @@
 @php
 	$menus = [
 	    (object) [
-	        'name' => 'Dasbor',
+	        'name' => 'Dasbord',
 	        'link' => route('dasbor'),
-	        'icon' => 'chart-pie',
+	        'icon' => '',
 	    ],
 	    (object) [
 	        'name' => 'Kuesioner',
 	        'link' => route('kuesioner.index'),
-	        'icon' => 'document-duplicate',
+	        'icon' => '',
 	    ],
 	    (object) [
 	        'name' => 'Responden',
 	        'link' => route('responden.index'),
-	        'icon' => 'users',
+	        'icon' => '',
 	    ],
 	    (object) [
 	        'name' => 'IKM',
 	        'link' => route('ikm.index'),
-	        'icon' => 'star',
+	        'icon' => '',
 	    ],
 	    (object) [
 	        'name' => 'Kritik & Saran',
 	        'link' => route('feedback.index'),
-	        'icon' => 'envelope',
+	        'icon' => '',
 	    ],
 	    (object) [
-	        'name' => 'Desa',
+	        'name' => 'Satuan Kerja',
 	        'link' => route('village.index'),
-	        'icon' => 'map-pin',
+	        'icon' => '',
 	    ]
 	];
 @endphp

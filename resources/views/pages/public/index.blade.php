@@ -1,14 +1,13 @@
 @extends('layouts.public')
 @section('title', 'Index Kepuasan Masyarakat')
 @section('content')
-	<section class="mb-10 bg-white bg-bottom bg-no-repeat px-5 pb-5 dark:bg-gray-900" style="background-image: url({{ asset('assets/wave.svg') }}); height: calc(100vh - 115px);">
-		<div class="mx-auto mt-10 grid h-full max-w-screen-lg rounded-xl border-2 bg-white px-4 py-8 shadow lg:h-auto lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
+	
+		<div class="mx-auto mt-10 grid h-full max-w-screen-lg rounded-xl border-2 bg-gray-200 px-4 py-8 shadow lg:h-auto lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
 			<div class="mr-auto md:pl-10 place-self-center text-center lg:col-span-7 lg:place-self-start lg:text-start">
 				<h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl xl:text-6xl">
 					Survey Kepuasan Masyarakat</h1>
 				<p class="mb-6 max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:mb-8 lg:text-xl">
-					Setiap penilaian yang Anda berikan adalah suara yang berarti bagi kami, dan kami
-sangat menghargai kontribusi Anda dalam meningkatkan kualitas layanan kami</p>
+					Selamat Datang di Survey Kepuasan Masyarakat</p>
 				<a href="{{ route('kuesioner') }}" class="mr-3 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
 					Klik Untuk Memulai Survey
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-2 h-6 w-6">
@@ -67,8 +66,8 @@ sangat menghargai kontribusi Anda dalam meningkatkan kualitas layanan kami</p>
 		<div class="mx-auto max-w-screen-lg px-4 py-8 sm:px-6 lg:px-8">
 			<div class="sm:flex sm:items-center sm:justify-between">
 				<a href="{{ route('index') }}" class="flex items-center">
-          <img src="{{ asset('assets/logo-app.png') }}" class="mr-3 h-8" alt="Logo" />
-					<span class="self-center whitespace-nowrap text-2xl font-medium dark:text-white">{{ config('app.name') }}</span>
+          <img src="{{ asset('assets/logo.jpeg') }}" class="mr-3 h-8" alt="Logo" />
+					<span class="self-center whitespace-nowrap text-2xl font-medium dark:text-white"></span>
         </a>
 				<p class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
 					Copyright &copy; 2024.diskominfo
@@ -77,4 +76,3 @@ sangat menghargai kontribusi Anda dalam meningkatkan kualitas layanan kami</p>
 		</div>
 	</footer>
 @endsection
-<!--  -->
