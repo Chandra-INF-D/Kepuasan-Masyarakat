@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('respondens', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('name');
             $table->string('gender');
             $table->integer('age');
             $table->string('education');

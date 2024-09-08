@@ -72,66 +72,6 @@
 					KABUPATEN GARUT</span>
 				</span>
 			</div>
-			{{-- <table style="width: 100%;">
-				<tr>
-					<td>
-						<table>
-							<tr>
-								<th>Tanggal Mulai</th>
-								<td>:</td>
-								<td>{{ request('start_date') }}</td>
-							</tr>
-							<tr>
-								<th>Tanggal Selesai</th>
-								<td>:</td>
-								<td>{{ request('end_date') }}</td>
-							</tr>
-						</table>
-					</td>
-					<td>
-						<table>
-							<tr>
-								<th>Jenis Kelamin</th>
-								<td>:</td>
-								<td>{{ request('gender') ?? 'Semua' }}</td>
-							</tr>
-							<tr>
-								<th>Umur</th>
-								<td>:</td>
-								<td>{{ request('age') ?? 'Semua' }}</td>
-							</tr>
-						</table>
-					</td>
-					<td>
-						<table>
-							<tr>
-								<th>Pendidikan</th>
-								<td>:</td>
-								<td>{{ request('education') ?? 'Semua' }}</td>
-							</tr>
-							<tr>
-								<th>Pekerjaan</th>
-								<td>:</td>
-								<td>{{ request('job') ?? 'Semua' }}</td>
-							</tr>
-						</table>
-					</td>
-					<td>
-						<table>
-							<tr>
-								<th>Desa</th>
-								<td>:</td>
-								<td>{{ request('village') ?? 'Semua' }}</td>
-							</tr>
-							<tr>
-								<th>Pencarian</th>
-								<td>:</td>
-								<td>{{ request('search') }}</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table> --}}
 		</div>
 
 		<table class="table" style="margin-top: 25px;">

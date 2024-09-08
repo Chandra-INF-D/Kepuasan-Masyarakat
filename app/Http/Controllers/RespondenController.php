@@ -33,8 +33,7 @@ class RespondenController extends Controller
         if ($request->has('search')) {
             $searchTerm = $request->search;
             $query->where(function ($subquery) use ($searchTerm) {
-                $subquery->where('name', 'like', "%$searchTerm%")
-                    ->orWhere('gender', 'like', "%$searchTerm%")
+                $subquery->Where('gender', 'like', "%$searchTerm%")
                     ->orWhere('age', 'like', "%$searchTerm%")
                     ->orWhere('education', 'like', "%$searchTerm%")
                     ->orWhere('job', 'like', "%$searchTerm%")

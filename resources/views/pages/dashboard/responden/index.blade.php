@@ -146,9 +146,6 @@
 							#
 						</th>
 						<th scope="col" class="px-6 py-3">
-							Nama
-						</th>
-						<th scope="col" class="px-6 py-3">
 							Jenis Kelamin
 						</th>
 						<th scope="col" class="px-6 py-3">
@@ -161,7 +158,7 @@
 							Pekerjaan
 						</th>
 						<th scope="col" class="px-6 py-3">
-							Desa
+							Satuan Kerja
 						<emp>
 						<th scope="col" class="px-6 py-3">
 							Tempat Tinggal
@@ -183,9 +180,6 @@
 							<tr class="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
 								<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
 									{{ $respondens->firstItem() + $loop->index }}
-								</td>
-								<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
-									{{ $responden->name }}
 								</td>
 								<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
 									{{ $responden->gender }}

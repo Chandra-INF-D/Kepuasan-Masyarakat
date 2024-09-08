@@ -1,7 +1,7 @@
 @extends('layouts.dashboard', [
     'breadcrumbs' => [],
 ])
-@section('title', 'Dasbor')
+@section('title', 'Dasbord')
 @section('content')
 	<div class="my-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
 		<div class="duration-250 transform cursor-pointer overflow-hidden rounded-lg border bg-white shadow transition hover:scale-100 hover:shadow-lg">

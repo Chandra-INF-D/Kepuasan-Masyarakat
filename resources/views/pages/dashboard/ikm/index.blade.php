@@ -74,20 +74,6 @@
 					</div>
 				</form>
 			</div>
-			<dl class="mb-5 grid grid-cols-3 divide-x divide-gray-200 text-sm text-gray-900 dark:divide-gray-700 dark:text-white">
-				<div class="flex flex-col">
-					<dt class="mb-1 text-gray-500 dark:text-gray-400">Desa</dt>
-					<dd class="font-semibold">{{ request('filter') ?? 'Semua' }}</dd>
-				</div>
-				<div class="flex flex-col pl-5">
-					<dt class="mb-1 text-gray-500 dark:text-gray-400">Tanggal Mulai</dt>
-					<dd class="font-semibold">{{ request('start_date') }}</dd>
-				</div>
-				<div class="flex flex-col pl-5">
-					<dt class="mb-1 text-gray-500 dark:text-gray-400">Tanggal Selesai</dt>
-					<dd class="font-semibold">{{ request('end_date') }}</dd>
-				</div>
-			</dl>
 			<table class="w-full border text-left text-sm text-gray-500 dark:text-gray-400">
 				<thead class="bg-blue-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
 					<tr>

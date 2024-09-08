@@ -26,22 +26,22 @@ if (!function_exists('rateLabel')) {
 if (!function_exists('nilaPersepsi')) {
   function nilaPersepsi($konversiIKM)
   {
-    if ($konversiIKM >= 25.00 && $konversiIKM <= 64.99) {
+    if ($konversiIKM >= 25.00 && $konversiIKM <= 43.75) {
       return (object) [
         'mutu' => 'D',
         'kinerja' => "Tidak Baik"
       ];
-    } elseif ($konversiIKM >= 65.00 && $konversiIKM <= 76.00) {
+    } elseif ($konversiIKM >= 43.76 && $konversiIKM <= 62.50) {
       return (object) [
         'mutu' => 'C',
         'kinerja' => "Kurang Baik"
       ];
-    } elseif ($konversiIKM >= 76.01 && $konversiIKM <= 88.30) {
+    } elseif ($konversiIKM >= 62.51 && $konversiIKM <= 81.25) {
       return (object) [
         'mutu' => 'B',
         'kinerja' => "Baik"
       ];
-    } elseif ($konversiIKM >= 88.31 && $konversiIKM <= 100.00) {
+    } elseif ($konversiIKM >= 81.26 && $konversiIKM <= 100.00) {
       return (object) [
         'mutu' => 'A',
         'kinerja' => "Sangat Baik"

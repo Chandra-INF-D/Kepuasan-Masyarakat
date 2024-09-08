@@ -114,7 +114,6 @@ class IndexController extends Controller
 
                 $validator = Validator::make($data, [
                     'step' => 'required',
-                    'name' => 'required|max:30',
                     'gender' => 'required',
                     'age' => 'required|numeric|min:1|max:122',
                     'education' => 'required',
@@ -177,7 +176,6 @@ class IndexController extends Controller
     {
         try {
             $responden = Responden::create([
-                'name' => $request->name,
                 'gender' => $request->gender,
                 'age' => $request->age,
                 'education' => $request->education,

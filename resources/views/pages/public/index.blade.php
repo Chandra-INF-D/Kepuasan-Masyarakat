@@ -10,9 +10,6 @@
 					Selamat Datang di Survey Kepuasan Masyarakat</p>
 				<a href="{{ route('kuesioner') }}" class="mr-3 inline-flex items-center justify-center rounded-lg bg-primary-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
 					Klik Untuk Memulai Survey
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-2 h-6 w-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-					</svg>
 				</a>
 			</div>
 			<div class="hidden lg:col-span-5 lg:mt-0 lg:flex">
@@ -25,7 +22,6 @@
 	<section class="mb-10 min-h-screen grid place-content-center px-5">
 		<div class="mx-auto max-w-screen-lg">
 			<div class="p-8">
-				<div class="felx-col flex items-center justify-center"> <span class="rounded-full bg-indigo-500 px-2 py-1 text-sm uppercase text-white"> IKM </span> </div>
 				<h1 class="mt-6 text-center text-4xl font-medium text-gray-700"> Indek Kepuasan Masyarakat </h1>
 				<p class="mt-6 text-center text-lg font-light text-gray-500">Terimakasih atas kepercayaan dan dukungan yang Anda berikan kepada kami. Kami
 					sangat bersemangat untuk terus memberikan layanan terbaik bagi Anda</p>

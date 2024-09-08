@@ -9,10 +9,6 @@
 	<x-card>
 		<div class="relative overflow-x-auto p-5 sm:rounded-lg">
 			<dl class="w-full divide-y divide-gray-200 text-gray-900 dark:divide-gray-700 dark:text-white mb-5">
-				<div class="flex flex-col pb-3">
-					<dt class="mb-1 text-gray-500 dark:text-gray-400 md:text-lg">Nama Lengkap</dt>
-					<dd class="text-lg font-semibold">{{ $responden->name }}</dd>
-				</div>
 				<div class="flex flex-col py-3">
 					<dt class="mb-1 text-gray-500 dark:text-gray-400 md:text-lg">Jenis Kelamin</dt>
 					<dd class="text-lg font-semibold">{{ $responden->gender }}</dd>

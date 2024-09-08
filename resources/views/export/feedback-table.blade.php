@@ -80,9 +80,6 @@
 							No.
 						</th>
 						<th scope="col" class="px-6 py-3">
-							Nama
-						</th>
-						<th scope="col" class="px-6 py-3">
 							Kritik dan Saran
 						</th>
 					</tr>
@@ -92,9 +89,6 @@
 						<tr class="border-b bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600">
 							<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
 								{{ $loop->iteration }}
-							</td>
-							<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
-								{{ $item->responden->name }}
 							</td>
 							<td scope="row" class="px-6 py-4 text-gray-900 dark:text-white">
 								{{ $item->feedback }}

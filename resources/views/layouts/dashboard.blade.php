@@ -16,7 +16,7 @@
 	        'icon' => '',
 	    ],
 	    (object) [
-	        'name' => 'IKM',
+	        'name' => 'Indeks Survey',
 	        'link' => route('ikm.index'),
 	        'icon' => '',
 	    ],

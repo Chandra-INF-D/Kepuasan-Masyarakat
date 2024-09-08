@@ -51,7 +51,7 @@ function getIkmData($respondens, $kuesioners)
         $data[$key] = (object) [
             'question' => $value->question,
             'totalNilaiPersepsiPerUnit' => $value->totalNilaiPersepsiPerUnit,
-            'NRRPerUnsur' => $value->totalNilaiPersepsiPerUnit / count($respondens)
+            'PerUnsur' => $value->totalNilaiPersepsiPerUnit / count($respondens)
         ];
     }
 

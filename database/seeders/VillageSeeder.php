@@ -12,20 +12,11 @@ class VillageSeeder extends Seeder
     public function run(): void
     {
         $villages = [
-            'Moodulio',
-            'Muara Bone',
-            'Masiaga',
-            'Taludaa',
-            'Permata',
-            'Inogaluma',
-            'Molamahu',
-            'Sogitia',
-            'Cendana Putih',
-            'Monano',
-            'Tumbuh Mekar',
-            'Waluhu',
-            'Ilohuuwa',
-            'Bilolantunga',
+            'sekretariat',
+            'kecamatan',
+            'kelurahan',
+            'puskesmas',
+            
         ];
 
         foreach ($villages as $village) {

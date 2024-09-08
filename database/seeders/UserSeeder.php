@@ -12,10 +12,10 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
-            'name' => 'Admin IKM',
-            'email' => 'admin@ikm.test',
-            'password' => Hash::make('pass1234'),
-            'avatar' => hash('sha256', strtolower(trim('admin@ikm.test')))
+            'name' => 'Admin 123',
+            'email' => 'admin123@gmail.com',
+            'password' => Hash::make('admin123'),
+            'avatar' => hash('sha256', strtolower(trim('admin123@gmail.com')))
         ]);
     }
 }

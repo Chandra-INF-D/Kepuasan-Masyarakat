@@ -17,7 +17,6 @@ class RespondenFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
             'gender' => fake()->randomElement(['Laki-laki', 'Perempuan']),
             'age' => fake()->numberBetween(15, 100),
             'education' => fake()->randomElement(['SD', 'SMP', 'SMA', 'D4', 'D3', 'S1', 'S2', 'S3']),

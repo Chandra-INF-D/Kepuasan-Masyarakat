@@ -2,7 +2,6 @@
 	
 	<form action="{{ route('result.store') }}" method="POST">
 		@csrf
-		<input type="hidden" name="name" value="{{ $data['name'] }}">
 		<input type="hidden" name="gender" value="{{ $data['gender'] }}">
 		<input type="hidden" name="age" value="{{ $data['age'] }}">
 		<input type="hidden" name="job" value="{{ $data['job'] }}">

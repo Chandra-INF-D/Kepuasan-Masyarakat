@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('villages', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('village', 25)->unique();
+            $table->string('village', 100)->unique();
             $table->tinyInteger('allowDelete')->default(0);
             $table->timestamps();
         });
